@@ -38,6 +38,11 @@ get "/post" do
     erb :post
 end
 
+get "/read" do
+    @posts = Post.all
+    erb :read
+end
+
 get "/profile" do
     @user = User.find(session[:user_id])
     @posts = @user.posts

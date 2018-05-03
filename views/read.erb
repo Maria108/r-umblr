@@ -1,26 +1,28 @@
 
-    <div class="container">
+<div class="container">
     <div class="row">
         <div class="col s12">
             <h4>Recently added posts</h4>
         </div>
     </div>
     <div class="row">
-    <% @posts.each do |post| %>
-    
-        <div class="col s12 m6 l4">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                    <a href="post/<%=post.id %>" class="post-image" style="background-image: url(<%=post.picture %>)">
-                        
-                        <span class="card-title"><%= post.title %></span>
-                    </a>
+        <% if @posts != nil %>
+            <% @posts.each do |post| %>
+                <div class="col l12">            
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="<%= post.picture %>">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><%= post.title %><i class="material-icons right">...</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
+                            <p class="info_cake"><%= post.postbody %></p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-    
-    <% end %>
+            <% end %>
+         <% end %>
     </div>
-
-
 </div>

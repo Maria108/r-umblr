@@ -1,6 +1,4 @@
-# Edge-Case Bakery
-
-You can check it [here](https://radiant-tundra-38379.herokuapp.com/)
+# Blog
 
 It is a fullstack bakery website that displays information on produce offered for sale as well as enables someone to receive a catalog of items sold via email.
 
