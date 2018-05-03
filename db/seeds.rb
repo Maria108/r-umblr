@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-require "./models"
+require "./models/user"
 
-User.create(username: "admin", password: "admin")
+User.create(
+    first_name: "Masha",
+    last_name: "Abasha",
+    d_o_b: "3/14/1995",
+    email: "admin@mail",
+    password: "admin"
+)
+

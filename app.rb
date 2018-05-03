@@ -6,7 +6,9 @@ require "json"
 require "erb"
 require 'date'
 
-require "./models"
+require "./models/tag"
+require "./models/user"
+require "./models/post"
 
 include SendGrid
 
@@ -42,7 +44,7 @@ post "/signin" do
         updated_at: DateTime.now,
     )
 
-    redirect "/"
+    redirect "/profile"
 end
 
 post "/signup" do
@@ -51,11 +53,11 @@ post "/signup" do
         first_name: @first_name,
         last_name: @last_name,
         d_o_b: @d_o_b,
-        username: @email,
+        email: @email,
         password: @password,
         created_at: DateTime.now,
         updated_at: DateTime.now,
     )
 
-    redirect "/"
+    redirect "/profile"
 end
