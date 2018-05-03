@@ -12,6 +12,11 @@
 
 ActiveRecord::Schema.define(version: 2018_05_03_004539) do
 
+  create_table "post_tags", force: :cascade do |t|
+    t.string "tag_id"
+    t.string "post_id"
+  end
+
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.string "picture"
@@ -19,11 +24,6 @@ ActiveRecord::Schema.define(version: 2018_05_03_004539) do
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-  end
-
-  create_table "posts_tags", force: :cascade do |t|
-    t.string "tag_id"
-    t.string "post_id"
   end
 
   create_table "tags", force: :cascade do |t|

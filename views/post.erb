@@ -1,9 +1,10 @@
 <div class="container">
-<h4>Create your new post here and share it with readers!</h4>
-<form method="POST" action="/post/save" id="new-post">
-  <input type="text" name="title" placeholder="Title">
-   <input type="text" name="picture" placeholder="Image link">
-  <input type="text" name="postbody" placeholder="Text">
-  <button class="btn waves-effect waves-light grey" type="submit">Submit</button>
-</form>
+  <h4>Create your new post here and share it with readers!</h4>
+  <form method="post" action="/save-post" id="new-post">
+    <input type="text" name="title" placeholder="Title">
+    <input type="text" name="picture" placeholder="Image link">
+    <input type="text" name="postbody" placeholder="Text">
+    <input type="text" name="tag" placeholder="Tags">
+    <button class="btn waves-effect waves-light grey" type="submit">Submit</button>
+  </form>
 </div>

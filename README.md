@@ -17,13 +17,15 @@ Features The key features are:
 
 # How to
 
+1. `bundle install`
+
 1. `rake db:create_migration NAME=create_users_table`
 
 1. `rake db:create_migration NAME=create_posts_table`
 
 1. `rake db:create_migration NAME=create_tags_table`
 
-1. `rake db:create_migration NAME=create_posts_tags_table`
+1. `rake db:create_migration NAME=create_post_tags_table`
 
 1. `rake db:migrate`
 
