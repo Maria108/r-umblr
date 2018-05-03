@@ -1,7 +1,14 @@
 body {
     background-image: url("images/main.jpeg");
     background-repeat: no-repeat;
-    background-size: cover
+    background-size: cover;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
 }
 
 .logo {
@@ -82,12 +89,6 @@ footer a {
     text-decoration: none;
     margin: 0 20px;
     padding: 10px 20px;
-}
-
-.page-footer {
-    position:absolute;
-    bottom:0;
-    width:100%;
 }
 
 .social-info {

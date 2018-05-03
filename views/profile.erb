@@ -4,6 +4,7 @@
         <li><a href="/userinfo">My Info</a></li>
         <li><a href="/logout">Log Out</a></li>
         <li><a href="/post">Create Post</a></li>
+        <li><a href="/delete_profile">Delete Profile</a></li>
         <li><a href="/read">Read</a></li>
       </ul>
     </div>
@@ -14,7 +15,7 @@
     <div class="row">
         <% if @posts != nil %>
             <% @posts.each do |post| %>
-                <div class="col l12">            
+                <div class="col l10 push-l1">            
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="<%= post.picture %>">

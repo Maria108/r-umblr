@@ -49,6 +49,16 @@ get "/profile" do
     erb :profile
 end
 
+get '/delete_profile' do 
+    erb :delete_profile
+end
+
+delete "/delete_profile" do
+    @user = User.find(session[:user_id])
+    @user.destroy
+    redirect to "/"
+end
+
 post "/signin" do
     @user = User.find_by(email: params[:email])
     if @user && @user.password == params[:password]
@@ -61,7 +71,8 @@ end
 
 post "/signup" do
     @first_name, @last_name, @d_o_b, @email, @password = params[:first_name], params[:last_name], params[:d_o_b], params[:email], params[:password]
-    User.create(
+
+    @user = User.create(
         first_name: @first_name,
         last_name: @last_name,
         d_o_b: @d_o_b,
@@ -70,6 +81,8 @@ post "/signup" do
         created_at: DateTime.now,
         updated_at: DateTime.now,
     )
+
+    session[:user_id] = @user.id
 
     redirect "/profile"
 end
