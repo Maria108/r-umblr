@@ -14,6 +14,7 @@ include SendGrid
 
 
 set :database, "sqlite3:app.db"
+enable :sessions
 
 get "/" do
   erb :index
@@ -32,19 +33,18 @@ get "/post" do
 end
 
 get "/profile" do
+    @posts = Post.find_by(user_id: session[:user_id])
     erb :profile
 end
 
 post "/signin" do
-    @password, @email = params[:password], params[:email]
-    User.create(
-        username: @email,
-        password: @password,
-        created_at: DateTime.now,
-        updated_at: DateTime.now,
-    )
-
-    redirect "/profile"
+    @user = User.find_by(email: params[:email])
+    if @user && @user.password == params[:password]
+      session[:user_id] = @user.id
+      redirect "/profile"
+    else
+      redirect "/signin"
+    end
 end
 
 post "/signup" do

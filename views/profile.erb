@@ -12,52 +12,23 @@
 
 <div class="container">
     <div class="row">
-        <div class="col l12">
-            <div class="card">
-                <div class="card-image waves-effect waves-block waves-light">
-                <img class="activator" src="<%= @post.picture %>">
+        <% if @posts != nil %>
+            <% @posts.each do |post| %>
+                <div class="col l12">            
+                    <div class="card">
+                        <div class="card-image waves-effect waves-block waves-light">
+                            <img class="activator" src="<%= post.picture %>">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title activator grey-text text-darken-4"><%= post.title %><i class="material-icons right">...</i></span>
+                        </div>
+                        <div class="card-reveal">
+                            <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
+                            <p class="info_cake"><%= post.postbody %></p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card-content">
-                <span class="card-title activator grey-text text-darken-4"><%= @post.title %><i class="material-icons right">...</i></span>
-                </div>
-                <div class="card-reveal">
-                <span class="card-title grey-text text-darken-4"><%= @post.title %><i class="material-icons right">close</i></span>
-                <p class="info_cake"><%= @post.postbody %></p>
-                <p class="info_cake"><%= @author.screen_name %></p>
-                </div>
-            </div>
-        </div>
+            <% end %>
+         <% end %>
     </div>
 </div>
-
-
-
-    # <div class="row">
-    #     <div class="col s12"><h3> <%= @post.title %> </h3></div>
-    #     <div class="col s12"><h5> <%= @post.subtitle %> </h5></div>
-    #     <div class="col s12 m9">
-    #         <div class="row">
-    #         <div class="col s12"><img id="post-image" src="<%= @post.picture %>"></div>
-    #         <div class="col s12"><article> <%= @post.postbody %> </article></div>
-    #         <div class="col s12"><p> By <%= @author.screen_name %> </p></div>
-    #         </div>
-    #     </div>
-    #     <div class="col s12 m3">
-    #         <div class="row">
-    #         <div class="col s12"><h6>More posts by <%= @author.screen_name %></h6></div>
-    #         <div class="col s12">
-    #             <% @moreposts.each do |post| %>
-    #                 <div class="card">
-    #                     <div class="card-image waves-effect waves-block waves-light">
-    #                         <a href="<%=post.id %>">
-    #                             <img src="<%=post.picture %>">
-    #                             <span class="card-title"><%= post.title %></span>
-    #                         </a>
-    #                     </div>
-    #                 </div>    
-    #             <% end %>
-    #         </div>
-    #         <div class="col s12"><a href="/posts/<%= @author.screen_name %>">See All</a></div>
-    #         </div>
-    #     </div>
-    # </div>
