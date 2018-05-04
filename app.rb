@@ -100,12 +100,16 @@ post "/save-post" do
 
    tags =  @tag.split(",")
    tags.each do |tag|
-        tag_saved = Tag.create(
-            name: tag,
-        )
+        tag_obj = Tag.find_by(name: params[:tag])
+    
+        if tag_obj.nil?
+            tag_obj = Tag.create(
+                name: tag,
+            )
+        end
 
         PostTag.create(
-            tag_id: tag_saved.id,
+            tag_id: tag_obj.id,
             post_id: post_saved.id,
         )
    end
@@ -116,5 +120,11 @@ end
 delete "/posts/:id/delete" do
     @post = Post.find_by_id(params[:id])
     @post.delete
-    redirect to("/")
+    redirect to("/profile")
+end
+
+post "/tag_search" do
+    @tag = Tag.find_by(name: params[:tag])
+    @posts = @tag.posts
+    erb :post_tag
 end

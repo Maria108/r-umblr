@@ -4,6 +4,19 @@
         <div class="col s12">
             <h4>Recently added posts</h4>
         </div>
+        <div>
+        <nav>
+        <div class="nav-wrapper">
+          <form method="post" action="/tag_search">
+            <div class="input-field">
+              <input id="search" name="tag" type="search" required>
+              <label class="label-icon" for="search"><i class="material-icons">search by tags</i></label>
+              <i class="material-icons">close</i>
+            </div>
+          </form>
+        </div>
+      </nav>
+      </div>
     </div>
     <div class="row">
         <% if @posts != nil %>
@@ -19,6 +32,9 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
                             <p class="info_cake"><%= post.postbody %></p>
+                            <% post.tags.each do |tag| %>
+                                <span class="badge green"><%= tag.name %></span>
+                            <% end %>
                         </div>
                     </div>
                 </div>
