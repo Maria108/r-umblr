@@ -56,7 +56,7 @@ end
 delete "/delete_profile" do
     @user = User.find(session[:user_id])
     @user.destroy
-    redirect to "/"
+    redirect to("/")
 end
 
 post "/signin" do
@@ -89,7 +89,7 @@ end
 
 post "/save-post" do
     @title, @picture, @postbody, @tag = params[:title], params[:picture], params[:postbody], params[:tag]
-    @post_id = Post.create(
+    post_saved = Post.create(
         user_id: session[:user_id],
         title: @title,
         picture: @picture,
@@ -100,15 +100,21 @@ post "/save-post" do
 
    tags =  @tag.split(",")
    tags.each do |tag|
-        @tag_id = Tag.create(
+        tag_saved = Tag.create(
             name: tag,
         )
 
         PostTag.create(
-            tag_id: @tag_id,
-            post_id: @post_id,
+            tag_id: tag_saved.id,
+            post_id: post_saved.id,
         )
    end
 
     redirect "/profile"
+end
+
+delete "/posts/:id/delete" do
+    @post = Post.find_by_id(params[:id])
+    @post.delete
+    redirect to("/")
 end
