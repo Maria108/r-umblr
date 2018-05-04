@@ -13,9 +13,9 @@
 
 <div class="container">
     <div class="row">
-        <% if @posts != nil %>
+        <% if not @posts.nil? %>
             <% @posts.each do |post| %>
-                <div class="col l10 push-l1">            
+                <div class="col l10 push-l1">          
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="<%= post.picture %>">
@@ -26,6 +26,13 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
                             <p class="info_cake"><%= post.postbody %></p>
+                            <% post.tags.each do |tag| %>
+                                <p class="info_cake"><%= tag.id %></p>
+                            <% end %>
+                            <form action="/posts/<%= post.id %>/delete" method="post">
+                                <input id="hidden" type="hidden" name="_method" value="delete">
+                                <input type="submit" value="delete">
+                            </form>
                         </div>
                     </div>
                 </div>

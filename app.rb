@@ -98,14 +98,17 @@ post "/save-post" do
         updated_at: DateTime.now,
     )
 
-    @tag_id = Tag.create(
-        name: @tag,
-    )
+   tags =  @tag.split(",")
+   tags.each do |tag|
+        @tag_id = Tag.create(
+            name: tag,
+        )
 
-    PostTag.create(
-       tag_id: @tag_id,
-       post_id: @post_id,
-    )
+        PostTag.create(
+            tag_id: @tag_id,
+            post_id: @post_id,
+        )
+   end
 
     redirect "/profile"
 end
