@@ -49,6 +49,12 @@ get "/profile" do
     erb :profile
 end
 
+get "/userinfo" do
+    @user = User.find(session[:user_id])
+    
+    erb :userinfo
+end
+
 get '/delete_profile' do 
     erb :delete_profile
 end
