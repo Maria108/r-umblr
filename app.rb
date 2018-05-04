@@ -100,7 +100,7 @@ post "/save-post" do
 
    tags =  @tag.split(",")
    tags.each do |tag|
-        tag_obj = Tag.find_by(name: params[:tag])
+        tag_obj = Tag.find_by(name: tag)
     
         if tag_obj.nil?
             tag_obj = Tag.create(
