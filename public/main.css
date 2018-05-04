@@ -1,5 +1,5 @@
 body {
-    background-image: url("images/mainb.jpg");
+    background-image: url("images/mainw.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -15,14 +15,14 @@ main {
     text-align: center;
     color: azure;
     font-size: 150px;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 nav,
 .page-footer {
-    background-color: black;
+    background-color: turquoise;
     opacity: 0.8;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 #nav-mobile {
@@ -31,7 +31,7 @@ nav,
 }
 
 nav ul a {
-    font-size: 30px;
+    font-size: 50px;
     color: azure;
 }
 
@@ -43,37 +43,42 @@ footer a:hover {
 .about_us {
     text-align: left;
     font-size: 35px;
-    background-color: #ffffffa6;
+    background-color: rgba(240, 255, 255, 0.637);
     padding: 1em;
     border-radius: 1em;
     box-shadow: 0px 0px 10px -3px #000;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 .card .card-title {
     font-size: 33px;
     font-weight: 300;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 .card-content,
 .info_cake, h4 {
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pangolin', cursive;
 }
 
 .info_cake {
     font-size: 25px;
 }
 
-input {
+.submit {
     color: azure;
     border-radius: 10px;
-    font-family: 'Satisfy', cursive;
+    font-family: 'Pangolin', cursive;
     font-size: 25px;
 }
 
+.sign-text {
+    color: rgba(0, 0, 0, 0.623);
+    font-size: 50px;
+}
+
 input:hover {
-    color: aqua;
+    color: turquoise;
 }
 
 .sub {
@@ -85,6 +90,7 @@ input:hover {
 }
 
 footer a {
+    font-size: 30px;
     color: azure;
     text-decoration: none;
     margin: 0 20px;
@@ -96,6 +102,7 @@ footer a {
 }
 
 .contact_title {
+    font-size: 35px;    
     margin-left: inherit;
     margin-bottom: 30px;
 }
