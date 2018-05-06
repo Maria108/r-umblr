@@ -66,7 +66,7 @@ footer a:hover {
 }
 
 .submit {
-    color: azure;
+    /* color: azure; */
     border-radius: 10px;
     font-family: 'Pangolin', cursive;
     font-size: 25px;
@@ -105,4 +105,16 @@ footer a {
     font-size: 35px;    
     margin-left: inherit;
     margin-bottom: 30px;
+}
+
+.delete {
+    margin-top: 150px;
+}
+
+.brand-logo {
+    color: azure;       
+}
+
+.brand-logo:hover {
+    color: rgb(54, 146, 146);
 }

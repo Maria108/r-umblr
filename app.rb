@@ -55,12 +55,14 @@ get "/userinfo" do
     erb :userinfo
 end
 
-get '/delete_profile' do 
+get '/delete_profile' do
+    @user = User.find(session[:user_id])
+    
     erb :delete_profile
 end
 
-delete "/delete_profile" do
-    @user = User.find(session[:user_id])
+delete "/users/:id/delete" do
+    @user = User.find_by_id(params[:id])
     @user.destroy
     redirect to("/")
 end

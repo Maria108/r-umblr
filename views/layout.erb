@@ -14,13 +14,15 @@
   <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
+<div>
+    <a href="/" class="row brand-logo col l12 left-align"><i class="medium material-icons">home</i></a>
+</div>
   <main>
     <%= yield %>
   </main>
   <footer class="page-footer">
       <div class="row">
-        <div class="col l4 offset-l8 s12">
-        
+        <div class="col l12 right-align">
           <div class="social-info">
             <a href="https://www.instagram.com/108masha/" target="_blank"><i class="fab fa-facebook-square"></i></a>
             <a href="https://www.instagram.com/108masha/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -29,9 +31,9 @@
           </div>
         </div>
       </div>
-    </div>
-    <div class="footer-copyright">© 2018 Copyright Text</div>
-  </footer>
+    <div class="row col l12 center-align">© 2018 Copyright Text</div> 
+  </div>
+</footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    
 </body>

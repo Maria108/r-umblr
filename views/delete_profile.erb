@@ -1,5 +1,9 @@
-<h4>If you want to delete your profile press submit button?</h4>
-<form action="/delete_profile" method="delete"
-  <input type="hidden" name="_method" value="DELETE">    
-<button class="btn waves-effect waves-light grey" type="submit">Submit</button>
-</form>
+<div class="container delete">
+    <div class="row about_us col l12">
+    <h2>If you want to delete your profile press submit button</h2>
+    <form action="/users/<%= @user.id %>/delete" method="post">
+    <input id="hidden" type="hidden" name="_method" value="delete">
+    <input class="submit" type="submit" value="submit">
+    </form>
+    </div>
+</div>
