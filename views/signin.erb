@@ -2,12 +2,18 @@
     <h1 class = "logo col l12">Mom, Dad, I am vegetarian</h1>
 </div>
 <div class="container">
+<div class="row col l12">
+<h4 class="sign-text">Sign In</h4>
+</div>
+<form action="/signin" method="post">
   <div>
-    <h5 class="sign-text">Sign In</h5>
-      <form action="/signin" method="post">
-        <input type="text" name="email" placeholder="Enter your email" value="">
-        <input type="password" name="password" placeholder="Enter your password" value="">                  
-        <input class="submit" type="submit" value="sign in">
-      </form>
+    <label for="Email">Enter your email</label>
+    <input type="text" name="email">
   </div>
+  <div>
+    <label for="password">Enter your password</label>
+    <input type="password" name="password">
+  </div>
+   <button class="submit" type="submit">sign in</button>
+</form>
 </div>

@@ -1,10 +1,20 @@
 <div class="container">
-  <h4>Create your new post here and share it with readers!</h4>
-  <form method="post" action="/save-post" id="new-post">
-    <input type="text" name="title" placeholder="Title">
-    <input type="text" name="picture" placeholder="Image link">
-    <input type="text" name="postbody" placeholder="Text">
-    <input type="text" name="tag" placeholder="Tags">
-    <button class="btn waves-effect waves-light grey" type="submit">Submit</button>
-  </form>
+<h2>Create your new post here and share it with readers!</h2>
+<form method="post" action="/save-post">
+  <div>
+    <label for="Title">Title</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label for="content">Your Text Here</label>
+    <textarea name="postbody"></textarea>
+  </div>
+  <div>
+    <label for="image">Image URL</label>
+    <input type="text" name="picture">
+  </div>
+
+   <button class="submit" class="btn waves-effect waves-light grey" type="submit">Share</button>
+</form>
 </div>
+

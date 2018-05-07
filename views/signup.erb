@@ -1,16 +1,32 @@
 <div class="row">
     <h1 class = "logo col l12">Mom, Dad, I am vegetarian</h1>
 </div>
+
 <div class="container">
+<div class="row col l12">
+<h4 class="sign-text">Sign Up</h4>
+</div>
+<form action="/signup" method="post">
   <div>
-    <h5 class="sign-text">Sign up</h5>
-      <form action="/signup" method="post">
-        <input class="sign-text" type="text" name="first_name" placeholder="Enter your first name" value="">
-        <input type="text" name="last_name" placeholder="Enter your last name" value="">
-        <input type="text" name="d_o_b" placeholder="Enter your DOB" value="">
-        <input type="text" name="email" placeholder="Enter your email" value="">
-        <input type="password" name="password" placeholder="Enter your password" value="">                  
-        <input class="submit" type="submit" value="sign up">
-      </form>
+    <label for="First_name">Enter your first name</label>
+    <input type="text" name="first_name">
   </div>
+  <div>
+    <label for="Last_name">Enter your last name</label>
+    <input type="text" name="last_name">
+  </div>
+  <div>
+    <label for="DOB">Enter your DOB mm/dd/yyyy</label>
+    <input type="text" name="d_o_b">
+  </div>
+  <div>
+    <label for="Email">Enter your email</label>
+    <input type="text" name="email">
+  </div>
+  <div>
+    <label for="password">Enter your password</label>
+    <input type="password" name="password">
+  </div>
+   <button class="submit" type="submit">sign up</button>
+</form>
 </div>
