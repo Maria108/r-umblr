@@ -1,17 +1,18 @@
 # Blog
 
-It is a fullstack bakery website that displays information on produce offered for sale as well as enables someone to receive a catalog of items sold via email.
+It is a fullstack simple blog website that enables someone to sign up for an account and create relevant posts on a topic of their choosing.
 
 The requirements for completing this project are:
 
-* use the Sendgrid API to send an email to the user’s email with a catalog of all items sold
-* API key should be stored in an environment variable
-* Technologies Used Ruby, Sinatra, HTML, CSS, JS, Materialize, API
+    user can create an account/log into and log out of account/delete an account
+    show login and signup links only when logged out/show logout links only when logged in
+    user can create a new post only when logged in
+    have a page that lists out the 20 most recent posts made by the currently logged in user
+    have a page that lists the currently logged in user’s profile information
+    have the ability to see other user’s last 20 posts
+    use Activerecord to make all database transactions
+    use Sinatra as the web microframework backend
 
-Features The key features are:
-
-* Sengrid API sending email;
-* Materialize is used for page styling (card, tabs);
 
 # How to
 
