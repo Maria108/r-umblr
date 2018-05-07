@@ -55,6 +55,12 @@ get "/userinfo" do
     erb :userinfo
 end
 
+get "/userinfo/follow/:id" do
+    @user = User.find_by_id(params[:id])
+    
+    erb :userinfo_follow
+end
+
 get "/user/profile/:id" do
     @user = User.find_by_id(params[:id])
     @posts = @user.posts
