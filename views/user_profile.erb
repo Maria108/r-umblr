@@ -1,26 +1,16 @@
-<div class="row">
-    <h1 class = "logo col l12">Recently added posts</h1>
-</div>
+<nav>
+    <div class="nav-wrapper">
+      <ul id="nav-mobile" class="hide-on-med-and-down">
+        <li><a href="/user">User Info</a></li>
+        <li><a href="/read">Read</a></li>
+      </ul>
+    </div>
+</nav>
 <div class="container">
     <div class="row">
-        <div>
-        <nav>
-        <div class="nav-wrapper">
-          <form method="post" action="/tag_search">
-            <div class="input-field">
-              <input id="search" name="tag" type="search" required>
-                <label class="label-icon" for="search"><i class="material-icons">search by tags</i></label>
-              <i class="material-icons">close</i>
-            </div>
-          </form>
-        </div>
-      </nav>
-      </div>
-    </div>
-    <div class="row">
-        <% if @posts != nil %>
+        <% if not @posts.nil? %>
             <% @posts.each do |post| %>
-                <div class="col l10 push-l1">        
+                <div class="col l10 push-l1">          
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="<%= post.picture %>">
@@ -30,11 +20,17 @@
                         </div>
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
-                            <p class="info_cake"><%= post.postbody %></p>
-                            <a class="info_tag see_user" href="/user/profile/<%= post.user.id %>"<%= post.user.first_name %> <%= post.user.last_name %></a>                           
+                            <p class="info_tag"><%= post.postbody %></p>
+                            <p class="info_tag"><%= @user.first_name %> <%= @user.last_name %></p>
                             <% post.tags.each do |tag| %>
                                 <span class="badge green"><%= tag.name %></span>
                             <% end %>
+                            <div>
+                            <form action="/posts/<%= post.id %>/delete" method="post">
+                                <input id="hidden" type="hidden" name="_method" value="delete">
+                                <input type="submit" value="delete" class="submit">
+                            </form>
+                            </div>
                         </div>
                     </div>
                 </div>

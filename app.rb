@@ -55,6 +55,12 @@ get "/userinfo" do
     erb :userinfo
 end
 
+get "/user/profile/:id" do
+    @user = User.find_by_id(params[:id])
+    @posts = @user.posts
+    erb :user_profile
+end
+
 get '/delete_profile' do
     @user = User.find(session[:user_id])
     
