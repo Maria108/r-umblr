@@ -108,6 +108,7 @@ post "/save-post" do
 
    tags =  @tag.split(",")
    tags.each do |tag|
+        tag = tag.strip
         tag_obj = Tag.find_by(name: tag)
     
         if tag_obj.nil?
