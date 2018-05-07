@@ -48,6 +48,7 @@ footer a:hover {
     border-radius: 1em;
     box-shadow: 0px 0px 10px -3px #000;
     font-family: 'Pangolin', cursive;
+    margin-bottom: 1em;
 }
 
 .card .card-title {
@@ -135,4 +136,8 @@ input[type="text"] {
 span.badge {
     color: black;
     font-size: 25px;
+}
+
+.see_user:hover {
+    color: #344e5c;
 }

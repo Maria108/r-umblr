@@ -20,7 +20,7 @@
     <div class="row">
         <% if @posts != nil %>
             <% @posts.each do |post| %>
-                <div class="col l10 push-l1">            
+                <div class="col l10 push-l1">        
                     <div class="card">
                         <div class="card-image waves-effect waves-block waves-light">
                             <img class="activator" src="<%= post.picture %>">
@@ -31,6 +31,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
                             <p class="info_cake"><%= post.postbody %></p>
+                            <a class="info_tag see_user" href="/profile"><%= post.user.first_name %> <%= post.user.last_name %></a>                           
                             <% post.tags.each do |tag| %>
                                 <span class="badge green"><%= tag.name %></span>
                             <% end %>

@@ -24,6 +24,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
                             <p class="info_tag"><%= post.postbody %></p>
+                            <p class="info_tag"><%= @user.first_name %> <%= @user.last_name %></p>
                             <% post.tags.each do |tag| %>
                                 <span class="badge green"><%= tag.name %></span>
                             <% end %>
