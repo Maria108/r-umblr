@@ -32,7 +32,7 @@
                         <div class="card-reveal">
                             <span class="card-title grey-text text-darken-4"><%= post.title %><i class="material-icons right">close</i></span>
                             <p class="info_tag"><%= post.postbody %></p>
-                            <a class="info_tag see_user" href="/profile"><%= post.user.first_name %> <%= post.user.last_name %></a>
+                            <a class="info_tag see_user" href="/user/profile/<%= post.user.id %>"><%= post.user.first_name %> <%= post.user.last_name %></a>
                             <% post.tags.each do |tag| %>
                                 <span class="badge green"><%= tag.name %></span>
                             <% end %>
