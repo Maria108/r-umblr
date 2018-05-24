@@ -10,9 +10,6 @@ require "./models/user"
 require "./models/post"
 require "./models/post_tag"
 
-include SendGrid
-
-
 set :database, "sqlite3:app.db"
 enable :sessions
 
