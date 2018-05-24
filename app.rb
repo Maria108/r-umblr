@@ -1,7 +1,6 @@
 require "sinatra"
 require "sinatra/activerecord"
 require 'dotenv/load'
-require "sendgrid-ruby"
 require "json"
 require "erb"
 require 'date'
