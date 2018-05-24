@@ -10,7 +10,7 @@ require "./models/user"
 require "./models/post"
 require "./models/post_tag"
 
-set :database, "sqlite3:app.db"
+# set :database, "sqlite3:app.db"
 enable :sessions
 
 get "/" do
