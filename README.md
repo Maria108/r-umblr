@@ -1,6 +1,6 @@
 # R-umblr (Ruby Tumblr)
 
-![Admin panel for Marvel school](https://user-images.githubusercontent.com/32076687/41739202-59def7ea-7562-11e8-95c5-e0e7ad6aa376.jpg)
+![Ruby Tumblr](https://user-images.githubusercontent.com/32076687/41739202-59def7ea-7562-11e8-95c5-e0e7ad6aa376.jpg)
 
 The fourth individual project during Software Engineering Intensive course at New York Code and Design Academy.
 
