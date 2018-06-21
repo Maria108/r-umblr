@@ -1,6 +1,6 @@
 # R-umblr (Ruby Tumblr)
 
-![Admin panel for Marvel school](https://user-images.githubusercontent.com/32076687/41737566-aa0e981a-755d-11e8-928d-035ca1aa187d.jpg)
+![Admin panel for Marvel school](https://user-images.githubusercontent.com/32076687/41739202-59def7ea-7562-11e8-95c5-e0e7ad6aa376.jpg)
 
 The fourth individual project during Software Engineering Intensive course at New York Code and Design Academy.
 
@@ -25,7 +25,7 @@ The key features of this projetc are:
 
 Deployed to Heroku: https://veggie-blog.herokuapp.com/
 
-Sample User: email:  password: 
+Sample User: email: admin@mail.com password: admin
 
 # How to
 
